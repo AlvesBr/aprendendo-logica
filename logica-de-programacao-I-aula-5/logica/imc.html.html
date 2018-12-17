@@ -21,10 +21,12 @@
 		  
 	}
 	
-	var imcBruno = calculaImc(77, 1.77);			
-	var imcAmigo = calculaImc(65, 1.77);	
-	var totalImc = imcBruno + imcAmigo;
+	var nome = prompt(" Informe seu nome");
+	var alturaInforma = prompt(nome + " ,Informe sua altura");
+	var pesoinformado = prompt(nome + " ,Informe seu peso");
+
+	var imc = calculaImc(alturaInforma, pesoinformado);
 	
-	mostra("Meu IMC é: " + totalImc);
+	mostra("O IMC caldulado é:" + imc);
 	
-</script>
+	</script>
