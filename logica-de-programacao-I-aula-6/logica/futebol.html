@@ -8,6 +8,7 @@
 	
 	function mostra(frase) {
 		document.write ("<big>" + frase + "</big>");
+		
 		pulaLinha();
 	}
 	
@@ -17,9 +18,18 @@
 
     var vitorias = parseInt(prompt("Qual numero de vitorias do SP ?"));
 	var empates = parseInt(prompt("Qual numero de empates do SP ?"));
-	 
+	
 	var pontos = vitorias * 3 + empates;
+	var pontosAnoPassado = 28
 	
-	mostra("Os pontos do seu time é:" + pontos);
-	
+		
+	if (pontos < pontosAnoPassado){
+		mostra("Seu time esta pior que ano passado:" + pontos);
+		}
+	if (pontos > pontosAnoPassado){
+		mostra("Seu time esta melhor que ano passado:" + pontos);
+		}
+	if (pontos == pontosAnoPassado){
+		mostra("Seu time esta igual que ano passado:" + pontos);
+		}
 	</script>
