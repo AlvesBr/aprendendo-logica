@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br><br><hr>");
+	}
+	
+	function mostra(frase) {
+		document.write ("<big>" + frase + "</big>");
+		
+		pulaLinha();
+	}
+	
+	var anocopa = 1930
+	var Limite = parseInt(prompt("Entre com a variavel Limite"));
+ 
+	while (anocopa <= Limite){
+		mostra("Teve copa em:" + anocopa);
+		anocopa = anocopa + 4;
+		if (anocopa == 1942){
+		anocopa = anocopa + 8;
+		}
+	}
+	
+	mostra("FIM");
+	
+
+	</script>
