@@ -5,7 +5,44 @@
 
 
 <script>
-    var segredos = [5,7,10,2];
+    //retorna um numero aleatório
+    function sorteia () {
+        return Math.round(Math.random() * 10);
+    }
+
+    // vai receber a quantidade de numeros aleatorio e devolver a lista de segredos
+    function sorteiaNumeros(quantidade) {
+        var segredos = []; //variavel só existe dentro da função
+        var numero = 1; //é um contador 
+
+        //Enquanto numero (contador) for menor ou igual quantidade adiciona um novo numero
+        while(numero <= quantidade) { 
+            var numeroAleatorio = sorteia(); //esta recebendo o resultado da função sorteia
+            if(numeroAleatorio !== 0){
+                var achou = false; //variavel que verifica se foi encontrada dentro da list para ser ou não adicionada ao push
+                //varredura na lista de segredos
+                for(var posicao = 0; posicao <= segredos.length; posicao++){
+                if(segredos[posicao] == numeroAleatorio) {
+                    achou = true;
+                    break;
+                }
+                }
+            //só pode fazer o push se achou dentro da lista
+                if(achou == false){
+                segredos.push(numeroAleatorio); //vai receber um numero aleatório               
+                numero++;
+                }   
+        
+            }
+       
+        }
+    return segredos; //retornando a resultado da função para segredos
+    }
+    //quantidade de segredos que eu quero que seja gerado!!!
+    //inputa informações na quantidade da função sorteianumeros
+    var segredos = sorteiaNumeros(5);
+    
+    console.log(segredos);
 
     var input = document.querySelector("input");
     input.focus();
