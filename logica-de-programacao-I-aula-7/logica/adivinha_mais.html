@@ -5,15 +5,23 @@
 
 
 <script>
-    var segredo = 5
+    //criando numero aletório
+    var segredo = Math.round(Math.random() * 10);
+   //logando na console do numero
+   console.log(segredo);
+    //pegando dados do input html
     var input = document.querySelector("input");
-    
+    // focando na caixa do input
+    input.focus();
+    //função que verifica se esta correto
     function verifica(){
         if (input.value == segredo){
         alert("Aceeertou!");
         } else{
         alert("Errrrrou!!!");
         }   
+        input.value = "";
+        input.focus();
     }
     
     var button = document.querySelector("button");
